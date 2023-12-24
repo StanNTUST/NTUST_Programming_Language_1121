@@ -1,0 +1,181 @@
+Account <John Smith> now has $1400.0 balance
+
+EXCEPTION: Banking system throws a class BankingException with message: 
+        MESSAGE: Underfraft from Checking account name:John Smith
+        Account balance remains $1500.0
+
+
+Account <John Smith> is Checking Account
+Account <John Smith> now has $1500.0 balance
+Withdraw dollars test
+Account <John Smith> withdraw $1000 dollars
+EXCEPTION: Banking system throws a class BankingException with message:
+        MESSAGE: Underfraft from Checking account name:John Smith
+        Account balance remains $1500.0
+
+Withdraw dollars test2
+Account <John Smith> withdraw $1000 dollars
+EXCEPTION: Banking system throws a class BankingException with message:
+        MESSAGE: Underfraft from Checking account name:John Smith
+        Account balance remains $1500.0
+
+deposit dollars test
+Account <John Smith> deposit $2000 dollars
+Account <John Smith> now has $3500.0 balance
+invalid date test
+Account <John Smith> compute interest for a day
+EXCEPTION: Banking system throws a class BankingException with message:
+        MESSAGE: Invalid date to compute interest for Checking account nameJohn Smith
+        Account balance remains $3500.0
+
+compute interest's daily test
+Account <John Smith> compute interest for a day
+Number of days since last interest is 1
+Interest earned is 1.1506849315068493
+Account <John Smith> now has $3501.150684931507 balance
+compute interest's monthly test
+Account <John Smith> compute interest for a month
+Number of days since last interest is 29
+Interest earned is 33.38083392756615
+Account <John Smith> now has $3534.531518859073 balance
+
+
+Account <William Hurt> is Saving Account
+Account <William Hurt> now has $1500.0 balance
+Withdraw dollars test
+Account <William Hurt> withdraw $1000 dollars
+Account <William Hurt> now has $500.0 balance
+Withdraw dollars test2
+Account <William Hurt> withdraw $1000 dollars
+EXCEPTION: Banking system throws a class BankingException with message:
+        MESSAGE: Underfraft from Saving account name: William Hurt
+        Account balance remains $500.0
+
+deposit dollars test
+Account <William Hurt> deposit $2000 dollars
+Account <William Hurt> now has $2500.0 balance
+invalid date test
+Account <William Hurt> compute interest for a day
+EXCEPTION: Banking system throws a class BankingException with message:
+        MESSAGE: Invalid date to compute interest for Saving account name William Hurt
+        Account balance remains $2500.0
+
+compute interest's daily test
+Account <William Hurt> compute interest for a day
+Number of months since last interest is 0
+EXCEPTION: Banking system throws a class BankingException with message:
+        MESSAGE: Invalid date less than a month to compute interest for Saving account name William Hurt
+        Account balance remains $2500.0
+
+compute interest's monthly test
+Account <William Hurt> compute interest for a month
+Number of months since last interest is 1
+Interest earned is 24.999999999999996
+Account <William Hurt> now has $2525.0 balance
+transaction fee in saving account's test after three transactions
+Account <William Hurt> deposit $2000 dollars
+Account <William Hurt> now has $4525.0 balance
+Account <William Hurt> deposit $2000 dollars
+Account <William Hurt> now has $6524.0 balance
+After above one month, reset transaction times
+Account <William Hurt> withdraw $1000 dollars
+Account <William Hurt> now has $5524.0 balance
+
+
+Account <Woody Allison> is CD Account
+Account <Woody Allison> now has $1500.0 balance
+Withdraw dollars test
+Account <Woody Allison> withdraw $1000 dollars
+Account <Woody Allison> now has $250.0 balance
+Withdraw dollars test2
+Account <Woody Allison> withdraw $1000 dollars
+EXCEPTION: Banking system throws a class BankingException with message:
+        MESSAGE: Underfraft from CD account name: Woody Allison
+        Account balance remains $250.0
+
+deposit dollars test
+Account <Woody Allison> deposit $2000 dollars
+EXCEPTION: Banking system throws a class BankingException with message:
+        MESSAGE: Cannot deposit in CD account before 1 year: Woody Allison
+        Account balance remains $250.0
+
+invalid date test
+Account <Woody Allison> compute interest for a day
+EXCEPTION: Banking system throws a class BankingException with message:
+        MESSAGE: Invalid date to compute interest for CD account name Woody Allison
+        Account balance remains $250.0
+
+compute interest's daily test
+Account <Woody Allison> compute interest for a day
+Number of months since last interest is 0
+EXCEPTION: Banking system throws a class BankingException with message:
+        MESSAGE: Invalid date less than a month to compute interest for CD account name Woody Allison
+        Account balance remains $250.0
+
+compute interest's monthly test
+Account <Woody Allison> compute interest for a month
+Number of months since last interest is 1
+Interest earned is 2.4999999999999996
+Account <Woody Allison> now has $252.5 balance
+compute interest in CD account's test in a year
+Account <Woody Allison> compute interest in a year
+Number of months since last interest is 11
+Interest earned is 27.774999999999995
+Account <Woody Allison> now has $280.275 balance
+no more interest in CD account's test after a year
+Account <Woody Allison> compute interest after a year
+EXCEPTION: Banking system throws a class BankingException with message:
+        MESSAGE: The interest payments stop after a year for CD account name Woody Allison
+        Account balance remains $280.275
+
+deposit money in CD account's test after a year
+Account <Woody Allison> deposit $2000 dollars
+Account <Woody Allison> now has $2280.275 balance
+no withdraw fee in CD account's test after a year
+Account <Woody Allison> withdraw $1000 dollars
+Account <Woody Allison> now has $1280.275 balance
+
+
+Account <Judi Foster> is Loan Account
+Account <Judi Foster> now has $-2500.0 balance
+Withdraw dollars test
+Account <Judi Foster> withdraw $1000 dollars
+EXCEPTION: Banking system throws a class BankingException with message:
+        MESSAGE: Underfraft from Loan account name: Judi Foster
+        Account balance remains $-2500.0
+
+Withdraw dollars test2
+Account <Judi Foster> withdraw $1000 dollars
+EXCEPTION: Banking system throws a class BankingException with message:
+        MESSAGE: Underfraft from Loan account name: Judi Foster
+        Account balance remains $-2500.0
+
+deposit dollars test
+Account <Judi Foster> deposit $2000 dollars
+Account <Judi Foster> now has $-500.0 balance
+invalid date test
+Account <Judi Foster> compute interest for a day
+EXCEPTION: Banking system throws a class BankingException with message:
+        MESSAGE: Invalid date to compute interest for Loan account name Judi Foster
+        Account balance remains $-500.0
+
+compute interest's daily test
+Account <Judi Foster> compute interest for a day
+Number of days since last interest is 1
+Interest earned is -0.1643835616438356
+Account <Judi Foster> now has $-500.16438356164383 balance
+compute interest's monthly test
+Account <Judi Foster> compute interest for a month
+Number of days since last interest is 29
+Interest earned is -4.768690561080878
+Account <Judi Foster> now has $-504.9330741227247 balance
+deposit money in loan account's test if the asset is positive
+Account <Judi Foster> deposit $2000 dollars
+Account <Judi Foster> now has $1495.0669258772753 balance
+Account <Judi Foster> withdraw $1000 dollars
+Account <Judi Foster> now has $495.06692587727525 balance
+no compute balance's test if the asset is positive
+Account <Judi Foster> compute interest for a month
+Number of days since last interest is 30
+Interest earned is 0.0
+Account <Judi Foster> now has $495.06692587727525 balance

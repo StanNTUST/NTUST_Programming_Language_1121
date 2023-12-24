@@ -1,0 +1,158 @@
+Account <John Smith> now has $1400.0 balance
+
+EXCEPTION: Banking system throws a class BankingException with message: 
+        MESSAGE: Underfraft from Checking account name:John Smith
+        Account balance remains $1500.0
+//不足1000
+Account <John Smith> now has $2000.0 balance
+Withdraw dollars test
+Account <John Smith> withdraw $1100 dollars
+EXCEPTION: Banking system throws a class BankingException with message: 
+        MESSAGE: Underfraft from Checking account name:John Smith
+        Account balance remains $2000.0
+//不足1000
+Withdraw dollars test2
+Account <John Smith> withdraw $2100 dollars
+EXCEPTION: Banking system throws a class BankingException with message:
+        MESSAGE: Underfraft from Checking account name:John Smith
+        Account balance remains $2000.0
+
+deposit dollars test
+Account <John Smith> deposit $2200 dollars
+Account <John Smith> now has $4200.0 balance
+invalid date test
+Account <John Smith> compute interest for a invalid day
+EXCEPTION: Banking system throws a class BankingException with message:
+        MESSAGE: Invalid date to compute interest for Checking account nameJohn Smith
+        Account balance remains $4200.0
+
+compute interest's daily test
+Account <John Smith> compute interest for a day
+Number of days since last interest is 1
+Interest earned is 1.3808219178082193
+Account <John Smith> now has $4201.380821917808 balance
+compute interest's monthly test
+Account <John Smith> compute interest for a month
+Number of days since last interest is 29
+Interest earned is 40.057000713079375
+Account <John Smith> now has $4241.437822630887 balance
+
+Account <William Hurt> now has $2000.0 balance
+Withdraw dollars test
+Account <William Hurt> withdraw $1100 dollars
+Account <William Hurt> now has $900.0 balance
+//可以是負數
+Withdraw dollars test2
+Account <William Hurt> withdraw $2100 dollars
+Account <William Hurt> now has $-1200.0 balance
+deposit dollars test
+Account <William Hurt> deposit $2200 dollars
+Account <William Hurt> now has $1000.0 balance
+invalid date test
+Account <William Hurt> compute interest for a invalid day
+EXCEPTION: Banking system throws a class BankingException with message:
+        MESSAGE: Invalid date to compute interest for Saving account name William Hurt
+        Account balance remains $1000.0
+
+compute interest's daily test
+Account <William Hurt> compute interest for a day
+EXCEPTION: Banking system throws a class BankingException with message:
+        MESSAGE: Invalid date less than a month to compute interest for Saving account name William Hurt
+        Account balance remains $1000.0
+//少於一個月
+compute interest's monthly test
+Account <William Hurt> compute interest for a month
+Number of months since last interest is 1
+Interest earned is 9.999999999999998
+Account <William Hurt> now has $1010.0 balance
+//三次後計算費用
+transaction fee in saving account's test after three transactions
+Account <William Hurt> deposit $2200 dollars
+Account <William Hurt> now has $3209.0 balance
+After above one month, reset transaction times
+Account <William Hurt> withdraw $2100 dollars
+Account <William Hurt> now has $1109.0 balance
+
+Account <Woody Allison> now has $2000.0 balance
+//每次250元手續費
+Withdraw dollars test
+Account <Woody Allison> withdraw $1100 dollars
+Account <Woody Allison> now has $650.0 balance
+Withdraw dollars test2
+Account <Woody Allison> withdraw $2100 dollars
+EXCEPTION: Banking system throws a class BankingException with message:
+        MESSAGE: Underfraft from CD account name: Woody Allison
+        Account balance remains $650.0
+
+deposit dollars test
+Account <Woody Allison> deposit $2200 dollars
+EXCEPTION: Banking system throws a class BankingException with message:
+        MESSAGE: Cannot deposit in CD account before 1 year: Woody Allison
+        Account balance remains $650.0
+
+invalid date test
+Account <Woody Allison> compute interest for a invalid day
+EXCEPTION: Banking system throws a class BankingException with message:
+        MESSAGE: Invalid date to compute interest for CD account name Woody Allison
+        Account balance remains $650.0
+
+compute interest's daily test
+Account <Woody Allison> compute interest for a day
+EXCEPTION: Banking system throws a class BankingException with message:
+        MESSAGE: Invalid date less than a month to compute interest for CD account name Woody Allison
+        Account balance remains $650.0
+
+compute interest's monthly test
+Account <Woody Allison> compute interest for a month
+Number of months since last interest is 1
+Interest earned is 19.999999999999996
+Account <Woody Allison> now has $670.0 balance
+
+deposit money in cd account's test after a year
+Account <Woody Allison> deposit $2200 dollars
+Account <Woody Allison> now has $2870.0 balance
+
+Account <Judi Foster> now has $-3000.0 balance
+Withdraw dollars test
+Account <Judi Foster> withdraw $1100 dollars
+EXCEPTION: Banking system throws a class BankingException with message:
+        MESSAGE: Underfraft from Loan account name: Judi Foster
+        Account balance remains $-3000.0
+
+Withdraw dollars test2
+Account <Judi Foster> withdraw $2100 dollars
+EXCEPTION: Banking system throws a class BankingException with message:
+        MESSAGE: Underfraft from Loan account name: Judi Foster
+        Account balance remains $-3000.0
+
+deposit dollars test
+Account <Judi Foster> deposit $2200 dollars
+Account <Judi Foster> now has $-800.0 balance
+invalid date test
+Account <Judi Foster> compute interest for a invalid day
+EXCEPTION: Banking system throws a class BankingException with message: 
+        MESSAGE: Invalid date to compute interest for Loan account name Judi Foster
+        Account balance remains $-800.0
+
+compute interest's daily test
+Account <Judi Foster> compute interest for a day
+Number of days since last interest is 1
+Interest earned is -0.263013698630137
+Account <Judi Foster> now has $-800.2630136986302 balance
+compute interest's monthly test
+Account <Judi Foster> compute interest for a month
+Number of days since last interest is 29
+Interest earned is -7.629904897729406
+Account <Judi Foster> now has $-807.8929185963596 balance
+deposit money in loan account's test if the account is positive
+Account <Judi Foster> deposit $3000 dollars
+Account <Judi Foster> now has $2192.10708140364 balance
+//存款為正後可以領錢
+Account <Judi Foster> withdraw $2100 dollars
+Account <Judi Foster> now has $92.10708140364022 balance
+no compute balance's test if the account is positive
+//沒有利息
+Account <Judi Foster> compute interest for 11 month
+Number of days since last interest is 335
+Interest earned is 0.0
+Account <Judi Foster> now has $92.10708140364022 balance

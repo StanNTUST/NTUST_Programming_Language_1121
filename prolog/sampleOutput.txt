@@ -1,0 +1,60 @@
+relation(X,Y)->X是Y的relation
+
+input: mother(annie, janny).
+output: yes
+input: mother(mark, janny).
+output: no
+
+input: father(annie, janny).
+output: no
+input: father(mark, janny).
+output: yes
+
+input: son(janny,annie).
+output: no
+input: son(richard,annie).
+output: yes
+
+input: daughter(janny,annie).
+output: yes
+input: daughter(richard,annie).
+output: no
+
+input: child(janny,annie).
+output: yes
+input: child(richard,annie).
+output: yes
+
+input: sister(janny,richard).
+output: yes
+input: sister(richard,janny).
+output: no
+
+input: brother(janny,richard).
+output: no
+input: brother(richard,janny).
+output: yes
+
+input: sibling(janny,richard).
+output: yes
+input: sibling(richard,janny).
+output: yes
+
+input: uncle(richard,leo).
+output: yes
+input: uncle(joan,leo).
+output: no
+
+input: aunt(richard,leo).
+output: no
+input: aunt(joan,leo).
+output: yes
+
+input: cousin(ronnie, leo).
+output: no
+input: cousin(dylan, leo).
+output: yes
+input: cousin(rose, leo).
+output: yes
+input: cousin(haru, leo).
+output: yes 
